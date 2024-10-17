@@ -2,7 +2,7 @@
 
 <div align="center">
 <p>
-  <img width="300px" src="./src/assets/images/Logo_flightSO.png" alt="Logo" />
+  <img width="300px" src="./src/assets/images/Logo_flightSO_B.png" alt="Logo" />
 </p>
 
 ## ✈️ Flight SO
@@ -49,7 +49,7 @@ It is expected to have the following functionalities at the end of the project:
 Flightso, you can run with:
 
 ```sh
-npm run build
+ng build && electron
 ```
 
 </div>
