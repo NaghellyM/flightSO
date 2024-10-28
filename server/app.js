@@ -5,6 +5,10 @@ const { Sequelize, Model, DataTypes } = require("sequelize");
 const app = express();
 const port = 3000;
 
+// Middleware para parsear el cuerpo de las solicitudes
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // Crear instancia de Sequelize
 const sequelize = new Sequelize({
   dialect: "sqlite",
@@ -71,7 +75,6 @@ app.delete("/users/:id", async (req, res) => {
   }
 });
 
-// Iniciar el servidor
 app.listen(port, () => {
   console.log(`Servidor escuchando en el puerto ${port}`);
 });

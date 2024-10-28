@@ -49,7 +49,8 @@ It is expected to have the following functionalities at the end of the project:
 Flightso, you can run with:
 
 ```sh
-ng build && electron
+npm run electron
+
 ```
 
 </div>
