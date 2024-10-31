@@ -17,17 +17,19 @@ body {
   }
   .img-container {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     background-color: #ffffff;
     border: 0.5px solid #000000;
     transform: rotate(-45deg);
     overflow: hidden;
+    justify-content: center;
   }
   
   .img-container img {
-    width: auto;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
     transform: rotate(45deg);
   }
   

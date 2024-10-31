@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   constructor(private router: Router) {}
-
+  login = {
+    name: 'User 1',
+    image: './assets/images/avatar_flightSO.png'
+  }
   goToDesk(): void {
     this.router.navigate(['/desk']);
   }
