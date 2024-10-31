@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { HttpClientModule } from '@angular/common/http'; 
+
+//Componentes FlightSO
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
+import { BiosComponent } from './components/bios/bios.component';
+
 
 @NgModule({
   declarations: [
-     // Agrega tus componentes aquí
-  ],
+  
+    ],
   imports: [
     BrowserModule,
-    HttpClientModule, // Asegúrate de importar HttpClientModule aquí
+    HttpClientModule,
+    BiosComponent
   ],
   providers: [],
-  bootstrap: [], // Especifica el componente raíz que se ejecutará
 })
 export class AppModule {}

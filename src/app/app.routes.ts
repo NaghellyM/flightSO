@@ -1,9 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Routes } from '@angular/router';
-
+import { BiosComponent } from './components/bios/bios.component';
+import { LoginComponent } from './components/login/login.component';
+import { DeskComponent } from './components/desk/desk.component';
 export const routes: Routes = [
   {
-    path: 'user',
-    component: HttpClient,
+    path: '',
+    component: BiosComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'desk',
+    component: DeskComponent,
   },
 ];
