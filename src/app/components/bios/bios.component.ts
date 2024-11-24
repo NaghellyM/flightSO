@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './bios.component.css'
 })
 export class BiosComponent implements OnInit {
-  constructor(private router: Router, private ngZone: NgZone) {}
+  constructor(private router: Router, private ngZone: NgZone) { }
 
   biosText: string[] = ['Initializing BIOS...'];
   private biosData: string[] = [
@@ -29,19 +29,16 @@ export class BiosComponent implements OnInit {
   }
 
   simulateBIOS(): void {
-    let i = 0;
-    this.ngZone.runOutsideAngular(() => {
-      const interval = setInterval(() => {
-        if (i < this.biosData.length) {
-          this.ngZone.run(() => {
-            this.biosText = [...this.biosText, this.biosData[i]];
-            i++;
-          });
-        } else {
+    const interval = setInterval(() => {
+      if (this.biosData.length > 0) {
+        let line = this.biosData.shift();
+        this.biosText.push(line || '');
+      } else {
+        this.ngZone.run(() => {
           clearInterval(interval);
           this.router.navigate(['/login']);
-        }
-      }, 1000);
-    });
+        });
+      }
+    }, 1000);
   }
 }
