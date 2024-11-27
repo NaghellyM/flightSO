@@ -7,17 +7,14 @@
             <img src='assets/images/Fongo_flightSO.png' alt="icono" />
         </div>
         <div class="footer">
-            <div class="icon">📷</div>
+            <div class="icon" (click)="goToNotes()">📝</div>
             <button class="icon" (click)="goToCalculator()" type="submit">🖩</button>
-            <button class="icon" (click)="goToTaskManageresk()" type="submit">
-                🏠
-            </button>
-            <div class="icon"></div>
+            <button class="icon" (click)="goToTaskManageresk()" type="submit">🏠</button>
+            <div class="icon">📷</div>
             <div class="icon">✉️</div>
             <div class="icon">⚙️</div>
         </div>
     </div>
-
     <script>
         function updateClock() {
             const now = new Date();

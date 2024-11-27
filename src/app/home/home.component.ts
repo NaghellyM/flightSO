@@ -17,6 +17,9 @@ export class HomeComponent {
   goToCalculator(): void {
     this.router.navigate(['/calculator']);
   }
+  goToNotes(): void {
+    this.router.navigate(['/notes']);
+  }
   goToTaskManageresk(): void {
     this.router.navigate(['/task-manager']);
   }
