@@ -4,7 +4,7 @@ import { CalculatorComponent } from './home/calculator/calculator.component';
 
 export const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
   },
   {

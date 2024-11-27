@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "serve-server": "node ./server/app.js",
-    "electron": "npm run build && npm run serve-server & electron .",
+    "electron": "npm run build & electron .",
     "test": "ng test"
   },
   "private": true,
