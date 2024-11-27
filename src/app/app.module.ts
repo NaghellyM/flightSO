@@ -5,13 +5,13 @@ import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientMo
 
 @NgModule({
   declarations: [
-     // Agrega tus componentes aquí
+  
   ],
   imports: [
     BrowserModule,
-    HttpClientModule, // Asegúrate de importar HttpClientModule aquí
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [], // Especifica el componente raíz que se ejecutará
+  bootstrap: [],
 })
 export class AppModule {}
