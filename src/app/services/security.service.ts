@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, catchError, Observable, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 import { User } from '../models/user.models';
@@ -13,6 +13,7 @@ import { environment } from '../../environments/environment';
 export class SecurityService {
 
   theUser = new BehaviorSubject<User>(new User);
+
   constructor(private http: HttpClient) {
     this.verifyActualSession()
   }
@@ -24,24 +25,36 @@ export class SecurityService {
   * @returns Respuesta HTTP la cual indica si el usuario tiene permiso de acceso
   */
   login(user: User): Observable<any> {
-    return this.http.post<any>(`${environment.url_serve}/api/auth/login`, user);
+    return this.http.post<any>(`${environment.url_serve}/api/auth/login`, user).pipe(
+      catchError((error) => {
+        console.error('Error en la petición:', error);
+        return throwError(() => new Error('Error al iniciar sesión'));
+      })
+    );
   }
+
   /*
   Guardar la información de usuario en el local storage
   */
   saveSession(dataSesion: any) {
-    let data: User = {
-      id: dataSesion["user"]["_id"],
-      name: dataSesion["user"]["name"],
-      email: dataSesion["user"]["email"],
-      password: "",
-      role: dataSesion["user"]["role"],
-      token: dataSesion["token"],
+    if (!dataSesion || !dataSesion.email) {
+      console.error('Estructura de datos inválida:', dataSesion);
+      return;
+    }
 
+    const data: User = {
+      id: dataSesion.id || 0,
+      name: dataSesion.name || 'Desconocido',
+      email: dataSesion.email,
+      password: dataSesion.password || '',
+      role: dataSesion.role || 'user',
+      token: dataSesion.token || '',
     };
+
     localStorage.setItem('sesion', JSON.stringify(data));
     this.setUser(data);
   }
+
   /**
     * Permite actualizar la información del usuario
     * que acabó de validarse correctamente
