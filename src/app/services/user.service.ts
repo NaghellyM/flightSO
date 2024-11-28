@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3000/users'; // La URL de tu servidor Express
+  private apiUrl = 'http://localhost:3000/'; // La URL de tu servidor Express
 
   constructor(private http: HttpClient) {}
 
