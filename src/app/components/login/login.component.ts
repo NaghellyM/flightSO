@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit, OnDestroy {
         this.router.navigate(['dashboard']);
       },
       error: () => {
-        alert('Invalid email or password');
+  
       },
     });
   }

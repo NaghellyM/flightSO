@@ -12,15 +12,16 @@
         <div class="img-container">
             <img src="assets/images/Logo_flightSO.png" alt="User Avatar" />
         </div>
-        <form id="login-form">
+        <form id="login-form" (ngSubmit)="login()">
             <div class="input-container">
-                <input id="email" type="text"  placeholder="Email" required [(ngModel)]="user.email" />
+                <input id="email" type="text" placeholder="Email" required [(ngModel)]="user.email" name="email" />
             </div>
             <div class="input-container">
-                <input type="password" id="password" placeholder="Password" required [(ngModel)]="user.password" />
+                <input type="password" id="password" placeholder="Password" required [(ngModel)]="user.password"
+                    name="password" />
             </div>
             <div class="login_button">
-                <button type="button" (click)="login()">Entrar</button>
+                <button type="submit">Entrar</button>
             </div>
         </form>
     </div>
