@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ClockComponent } from './clock/clock.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ClockComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

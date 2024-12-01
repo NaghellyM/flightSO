@@ -12,7 +12,7 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
   styleUrl: './notes.component.css'
 })
 export class NotesComponent {
-  public editorContent: string = 'Mi contenido inicial';
+  public editorContent: string = '';
 
 
 }

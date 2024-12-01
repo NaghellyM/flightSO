@@ -1,7 +1,9 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="clock" id="clock">00:00</div>
+            <div class="clock" id="clock">
+                <app-clock></app-clock>
+            </div>
         </div>
         <div class="content">
             <img src='assets/images/Fongo_flightSO.png' alt="icono" />
@@ -15,14 +17,4 @@
             <div class="icon">⚙️</div>
         </div>
     </div>
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, "0");
-            const minutes = String(now.getMinutes()).padStart(2, "0");
-            document.getElementById("clock").textContent = `${hours}:${minutes}`;
-        }
-        setInterval(updateClock, 1000);
-        updateClock(); // Inicializa el reloj
-    </script>
 </body>

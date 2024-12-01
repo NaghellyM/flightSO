@@ -12,7 +12,6 @@ export class CalculatorComponent {
 
   display: string = '';
 
-  //Metodo para agregar caracteres al display
   appendToInput(value: string) {
 
     if (this.display.length < 30) {
