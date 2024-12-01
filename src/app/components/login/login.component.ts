@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       next: (data) => {
         console.log('Respuesta del servidor:', data);
         this.securityService.saveSession(data);
-        this.router.navigate(['bios']);
+        this.router.navigate(['home']);
       },
       error: (err) => {
         console.error('Error al iniciar sesión:', err);
@@ -46,6 +46,6 @@ export class LoginComponent implements OnInit, OnDestroy {
 
 
   goToDesk(): void {
-    this.router.navigate(['/bios']);
+    this.router.navigate(['/home']);
   }
 }

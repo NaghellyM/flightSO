@@ -1,0 +1,20 @@
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="clock" id="clock">
+                <app-clock></app-clock>
+            </div>
+        </div>
+        <div class="content">
+            <img src='assets/images/Fongo_flightSO.png' alt="icono" />
+        </div>
+        <div class="footer">
+            <div class="icon" (click)="goToNotes()">📝</div>
+            <button class="icon" (click)="goToCalculator()" type="submit">🖩</button>
+            <button class="icon" (click)="goToTaskManageresk()" type="submit">🏠</button>
+            <div class="icon">📷</div>
+            <div class="icon">✉️</div>
+            <div class="icon">⚙️</div>
+        </div>
+    </div>
+</body>

@@ -25,7 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/froala-editor/froala_editor.pkgd.min.css",
+              "src/assets/froala-editor/froala_style.min.css"
             ],
             "scripts": []
           },
