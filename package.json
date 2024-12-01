@@ -21,6 +21,12 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "angular-froala-wysiwyg": "^4.3.1",
+    "angular-resizable-element": "^7.0.2",
+    "font-awesome": "^4.7.0",
+    "froala-editor": "^4.3.1",
+    "interactjs": "^1.10.27",
+    "mathjs": "^14.0.0",
     "rxjs": "~7.8.0",
     "sweetalert2": "^11.14.5",
     "tslib": "^2.3.0",
@@ -38,6 +44,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "mathjs": "^13.2.0",
     "typescript": "~5.4.2"
   }
 }

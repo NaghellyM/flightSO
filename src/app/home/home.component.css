@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    color: #0277bd;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #fdfdfd;
+}
+
+.clock {
+    font-size: 24px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #c5fff8;
+    padding: 10px 0;
+}
+
+.icon {
+    background: transparent;
+    /* Sin fondo */
+    border: none;
+    /* Sin bordes */
+    color: inherit;
+    /* Se adapta al color del texto del contenedor */
+    cursor: pointer;
+    /* Indica que es clicable */
+    font-size: 2rem;
+    /* Adapta el tamaño de la fuente al contenedor */
+    padding: 0;
+    /* Elimina los espacios internos */
+    visibility: hidden;
+    /* Hace que el botón sea invisible */
+}
+
+.icon:hover {
+    visibility: visible;
+    /* Opcional: Visible al pasar el ratón */
+}
+
+.container:hover .icon {
+    visibility: visible;
+    /* Muestra el botón cuando se pasa el ratón sobre el contenedor */
+}

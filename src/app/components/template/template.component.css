@@ -1,0 +1,28 @@
+.header {
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.controls button {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.close-btn {
+    background-color: #ff5f56;
+}
+
+.toggle-size-btn {
+    background-color: #27c93f;
+}
+
+.minimize-btn {
+    background-color: #ffbd2e;
+}
+
+.content {
+    height: calc(100% - 2.5rem);
+}
