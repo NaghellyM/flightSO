@@ -6,7 +6,8 @@
 }
 
 .calculator {
-    width: 60%;
+    width: 90%;
+    
     background-color: #8fb9b2;
     padding: 20px;
     border-radius: 10px;
@@ -14,7 +15,7 @@
 }
 
 .calculator-screen {
-    width: 98%;
+    width: 95%; /* Asegura que ocupe todo el ancho disponible */
     height: 50px;
     font-size: 24px;
     text-align: right;
@@ -28,8 +29,12 @@
 
 .calculator-buttons {   
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+    grid-template-rows: repeat(5, 1fr); /* 5 filas de igual altura */
     grid-gap: 10px;
+    max-width: 100%; /* Evita que se sobrepasen del ancho de .calculator */
+    justify-items: center; /* Centra los botones dentro de cada celda */
+    justify-content: center; /* Asegura que los botones se distribuyan de manera uniforme */
 }
 
 button {
@@ -39,6 +44,7 @@ button {
     background-color: #444;
     color: #48CFCB;
     cursor: pointer;
+    width: 100%; /* Asegura que los botones ocupen el ancho de la celda */
 }
 
 button:hover {

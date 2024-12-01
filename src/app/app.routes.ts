@@ -8,6 +8,10 @@ import { TemplateComponent } from './components/template/template.component';
 
 export const routes: Routes = [
   {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
     path: '',
     component: HomeComponent,
   },
