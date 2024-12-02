@@ -8,6 +8,7 @@ import { TemplateComponent } from './components/template/template.component';
 
 import { LoginComponent } from './components/login/login.component';
 import { BiosComponent } from './components/bios/bios.component';
+import { MusicComponent } from './home/music/music.component';
 
 export const routes: Routes = [
   {
@@ -27,7 +28,7 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'calculator', 
+    path: 'calculator',
     title: 'Calculator',
     component: CalculatorComponent,
   },
@@ -43,5 +44,10 @@ export const routes: Routes = [
   {
     path:'template',
     component: TemplateComponent,
+  },
+  {
+    path:'music',
+    title:'Music',
+    component: MusicComponent,
   }
 ];
