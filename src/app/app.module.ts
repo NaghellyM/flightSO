@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 
 @NgModule({
@@ -14,9 +13,7 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
     FormsModule,
     CommonModule,
     BrowserModule,
-    HttpClientModule,
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot()
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [],

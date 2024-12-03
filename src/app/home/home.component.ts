@@ -24,4 +24,10 @@ export class HomeComponent {
   goToTaskManageresk(): void {
     this.router.navigate(['/task-manager']);
   }
+  goToMusic(): void {
+    this.router.navigate(['/music']);
+  }
+  goToGame(): void {
+    this.router.navigate(['/game']);
+  }
 }

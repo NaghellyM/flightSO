@@ -2,13 +2,13 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { CalculatorComponent } from './home/calculator/calculator.component';
-import { NotesComponent } from './home/notes/notes.component';
 import { ClockComponent } from './home/clock/clock.component';
 import { TemplateComponent } from './components/template/template.component';
 
 import { LoginComponent } from './components/login/login.component';
 import { BiosComponent } from './components/bios/bios.component';
 import { MusicComponent } from './home/music/music.component';
+import { GameComponent } from './home/game/game.component';
 
 export const routes: Routes = [
   {
@@ -33,11 +33,6 @@ export const routes: Routes = [
     component: CalculatorComponent,
   },
   {
-    path: 'notes',
-    title: 'Notes',
-    component: NotesComponent,
-  },
-  {
     path:'clock',
     component: ClockComponent,
   },
@@ -49,5 +44,10 @@ export const routes: Routes = [
     path:'music',
     title:'Music',
     component: MusicComponent,
+  },
+  {
+    path:'game',
+    title:'Game',
+    component: GameComponent,
   }
 ];

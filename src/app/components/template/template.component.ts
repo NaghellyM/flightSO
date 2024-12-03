@@ -1,4 +1,11 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  ViewEncapsulation,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -8,9 +15,10 @@ import { Router } from '@angular/router';
   imports: [CommonModule],
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.css'],
+  encapsulation: ViewEncapsulation.Emulated, // Cambia a ShadowDom o None si es necesario
 })
 export class TemplateComponent implements OnInit {
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   @Input() label: string = '';
   @Input() style: { [key: string]: any } = {};
