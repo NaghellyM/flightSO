@@ -1,0 +1,14 @@
+<app-template>
+<div class="game-container">
+    <h1 class="game-title">Juego de memoria</h1>
+    <div class="card-grid">
+      <div *ngFor="let card of cards" (click)="flipCard(card)" [ngClass]="{
+        'card-flipped': card.flipped || card.matched,
+        'card-hidden': !card.flipped && !card.matched
+      }" class="card">
+        {{ card.flipped || card.matched ? card.image : '' }}
+      </div>
+    </div>
+    <button (click)="resetGame()" class="reset-button">Reset Game</button>
+</div>
+
