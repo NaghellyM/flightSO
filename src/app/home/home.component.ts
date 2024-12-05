@@ -30,4 +30,7 @@ export class HomeComponent {
   goToGame(): void {
     this.router.navigate(['/game']);
   }
+ goToBrowser(): void {
+  window.open('https://www.google.com/', '_blank');
+}
 }
