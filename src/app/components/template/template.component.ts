@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
   imports: [CommonModule],
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.css'],
-  encapsulation: ViewEncapsulation.Emulated, // Cambia a ShadowDom o None si es necesario
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class TemplateComponent implements OnInit {
   constructor(private router: Router) {}
@@ -30,9 +30,13 @@ export class TemplateComponent implements OnInit {
   public position = { x: 0, y: 0 };
   public selected = false;
 
+  private isActive: boolean = false;
+
   closeApp(): void {
     this.router.navigate(['/home']);
+    this.removeApp.emit(this.label.toLowerCase());
   }
+
   toggleSize(): void {
     this.position = { x: 0, y: 0 };
     this.expanded = !this.expanded;
@@ -60,5 +64,17 @@ export class TemplateComponent implements OnInit {
       this.position = { x: event.clientX, y: event.clientY };
     }
     this.selected = false;
+  }
+
+  activateWindow(): void {
+    this.isActive = true;
+    this.putInFront.emit(this.label.toLowerCase());
+  }
+
+  closeWindow(): void {
+    if (this.isActive) {
+      this.isActive = false;
+      this.removeApp.emit(this.label.toLowerCase());
+    }
   }
 }

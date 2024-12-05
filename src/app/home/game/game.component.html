@@ -1,5 +1,5 @@
 <app-template>
-<div class="game-container">
+  <div class="game-container">
     <h1 class="game-title">Juego de memoria</h1>
     <div class="card-grid">
       <div *ngFor="let card of cards" (click)="flipCard(card)" [ngClass]="{
@@ -10,5 +10,5 @@
       </div>
     </div>
     <button (click)="resetGame()" class="reset-button">Reset Game</button>
-</div>
-
+  </div>
+</app-template>

@@ -9,18 +9,18 @@ import { LoginComponent } from './components/login/login.component';
 import { BiosComponent } from './components/bios/bios.component';
 import { MusicComponent } from './home/music/music.component';
 import { GameComponent } from './home/game/game.component';
+import { NotesComponent } from './home/notes/notes.component';
 
 export const routes: Routes = [
   {
-
     path: '',
     title: 'Login',
     component: LoginComponent,
   },
   {
-    path:'bios',
-    title:'Bios',
-    component: BiosComponent
+    path: 'bios',
+    title: 'Bios',
+    component: BiosComponent,
   },
   {
     path: 'home',
@@ -33,21 +33,26 @@ export const routes: Routes = [
     component: CalculatorComponent,
   },
   {
-    path:'clock',
-    component: ClockComponent,
-  },
-  {
-    path:'template',
-    component: TemplateComponent,
-  },
-  {
-    path:'music',
-    title:'Music',
+    path: 'music',
+    title: 'Music',
     component: MusicComponent,
   },
   {
-    path:'game',
-    title:'Game',
+    path: 'game',
+    title: 'Game',
     component: GameComponent,
-  }
+  },
+  {
+    path: 'notes',
+    title: 'Notes',
+    component: NotesComponent,
+  },
+  {
+    path: 'clock',
+    component: ClockComponent,
+  },
+  {
+    path: 'template',
+    component: TemplateComponent,
+  },
 ];

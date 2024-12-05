@@ -21,17 +21,29 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/froala_editor.pkgd.min.css"
             ],
-            "scripts": []
+
+            "scripts": [],
+            "optimization": true,
+            "allowedCommonJsDependencies": [
+              "froala-editor",
+              "mathjs",
+              "typed-function",
+              "javascript-natural-sort",
+              "tiny-emitter",
+              "escape-latex",
+              "seedrandom"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "2mb",
+                  "maximumWarning": "1.5mb"
                 },
                 {
                   "type": "anyComponentStyle",
