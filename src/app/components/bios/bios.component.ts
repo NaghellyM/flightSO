@@ -1,5 +1,6 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from '../../services/system.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,13 @@ import { Router } from '@angular/router';
   styleUrl: './bios.component.css',
 })
 export class BiosComponent implements OnInit {
-  constructor(private router: Router, private ngZone: NgZone) {}
+  constructor(
+    private router: Router,
+    private ngZone: NgZone,
+    private systemService: SystemService
+  ) {
+
+  }
 
   biosText: string[] = ['Initializing BIOS...'];
   private biosData: string[] = [

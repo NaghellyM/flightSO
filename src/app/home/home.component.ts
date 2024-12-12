@@ -28,7 +28,7 @@ export class HomeComponent {
     this.router.navigate(['/notes']);
   }
   goToTaskManageresk(): void {
-    this.router.navigate(['/task-manager']);
+    this.router.navigate(['/system']);
   }
   goToMusic(): void {
     this.router.navigate(['/music']);

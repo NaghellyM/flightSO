@@ -14,9 +14,6 @@ import { TemplateComponent } from '../../components/template/template.component'
   styleUrls: ['./notes.component.css'],
 })
 export class NotesComponent {
-viewNotes() {
-throw new Error('Method not implemented.');
-}
   user: User | undefined;
   constructor(
     private securityService: SecurityService,

@@ -1,0 +1,102 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2f;
+  color: #ffffff;
+}
+
+/* Task Manager Component */
+.task-manager {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #96efff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  font-size: 24px;
+  color: #7b66ff;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+
+.section {
+  margin: 20px 0;
+  background-color: #c5fff8;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+  color: #5fbdff;
+  margin-bottom: 10px;
+}
+
+.info-box,
+.cpu-box {
+  background-color: #c5fff8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-box p,
+.cpu-box p {
+  margin: 5px 0;
+}
+/* Tabla de procesos de Electron */
+.process-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: #c5fff8;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.process-table th,
+.process-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #5fbdff;
+}
+
+.process-table th {
+  background-color: #5fbdff;
+  color: #ffffff;
+}
+
+.process-table tr:nth-child(even) {
+  background-color: #e0ffff;
+}
+
+.process-table tr:hover {
+  background-color: #b0e6f8;
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.loading p,
+.error p {
+  font-size: 18px;
+  color: #5fbdff;
+}
+
+/* Error styling */
+.error p {
+  color: #ff6f61;
+}

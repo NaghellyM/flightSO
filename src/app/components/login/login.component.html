@@ -14,11 +14,11 @@
         </div>
         <form id="login-form" (ngSubmit)="login()">
             <label for="email">Nombre</label>
-            <input id="email" type="text" autocomplete="name" placeholder="Nombre" required [(ngModel)]="user.email"
+            <input id="email" type="text" autocomplete="name" placeholder="Usuario" required [(ngModel)]="user.email"
                 name="email" />
 
             <label for="password">Contraseña</label>
-            <input type="password" autocomplete="current-password" id="password" placeholder="Contraseña" required
+            <input type="password" autocomplete="current-password" id="password" placeholder="***" required
                 [(ngModel)]="user.password" name="password" />
 
             <div class="login_button">

@@ -10,11 +10,12 @@ import { BiosComponent } from './components/bios/bios.component';
 import { MusicComponent } from './home/music/music.component';
 import { GameComponent } from './home/game/game.component';
 import { NotesComponent } from './home/notes/notes.component';
+import { SystemComponent } from './home/system/system.component';
 
 export const routes: Routes = [
   {
     path: '',
-    title: 'Login',
+    title: 'Inicio de sesion',
     component: LoginComponent,
   },
   {
@@ -24,29 +25,35 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    title: 'Home',
+    title: 'Escritorio',
     component: HomeComponent,
   },
   {
     path: 'calculator',
-    title: 'Calculator',
+    title: 'Calculadora',
     component: CalculatorComponent,
   },
   {
     path: 'music',
-    title: 'Music',
+    title: 'Musica',
     component: MusicComponent,
   },
   {
     path: 'game',
-    title: 'Game',
+    title: 'Juego',
     component: GameComponent,
   },
   {
     path: 'notes',
-    title: 'Notes',
+    title: 'Notas',
     component: NotesComponent,
   },
+  {
+    path:'system',
+    title: 'Administrador de tareas',
+    component: SystemComponent
+  }
+  ,
   {
     path: 'clock',
     component: ClockComponent,
