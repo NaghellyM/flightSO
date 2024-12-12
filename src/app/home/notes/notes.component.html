@@ -3,8 +3,15 @@
     <div class="editor-container" [froalaEditor] [(froalaModel)]="editorContent">
     </div>
     <div class="button-container">
-      <button class="button save" (click)="saveContent()">Save</button>
+      <button class="button save" (click)="saveContent()">Guardar</button>
       <button class="button view" (click)="ViewNotes()">Notas</button>
+    </div>
+
+    <!-- Mostrar las notas obtenidas -->
+    <div *ngIf="notes.length > 0" class="notes-list">
+      <div *ngFor="let note of notes">
+        <p>{{ getNoteContent(note.content) }}</p>
+      </div>
     </div>
   </div>
 </app-template>
