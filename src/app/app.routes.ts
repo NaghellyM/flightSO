@@ -11,6 +11,7 @@ import { MusicComponent } from './home/music/music.component';
 import { GameComponent } from './home/game/game.component';
 import { NotesComponent } from './home/notes/notes.component';
 import { SystemComponent } from './home/system/system.component';
+import { FileComponent } from './home/file/file.component';
 
 export const routes: Routes = [
   {
@@ -49,11 +50,15 @@ export const routes: Routes = [
     component: NotesComponent,
   },
   {
-    path:'system',
+    path: 'system',
     title: 'Administrador de tareas',
-    component: SystemComponent
-  }
-  ,
+    component: SystemComponent,
+  },
+  {
+    path: 'file',
+    title: 'Administrador de archivos',
+    component: FileComponent,
+  },
   {
     path: 'clock',
     component: ClockComponent,

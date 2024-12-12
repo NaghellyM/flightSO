@@ -5,6 +5,7 @@ import { ClockComponent } from './clock/clock.component';
 import { User } from '../models/user.models';
 
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -35,6 +36,9 @@ export class HomeComponent {
   }
   goToGame(): void {
     this.router.navigate(['/game']);
+  }
+  goToFile(): void {
+    this.router.navigate(['/file']);
   }
   goToBrowser(): void {
     window.open('https://www.google.com/', '_blank');

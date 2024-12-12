@@ -1,0 +1,36 @@
+<app-template>
+
+  <body>
+    <div class="file-manager">
+      <div class="window">
+        <!-- Contenido de la ventana -->
+        <div class="window-body">
+          <div class="file-list">
+            <div class="file-item">
+              <img src="assets/icon/folder.png" alt="Carpeta" class="file-icon">
+              <p>Documentos</p>
+            </div>
+            <div class="file-item">
+              <button class="icon" (click)="goToPhoto()">
+                <img src="assets/icon/photos.png" alt="Fotos" class="file-icon">
+              </button>
+              <p>Imágenes</p>
+            </div>
+            <div class="file-item">
+              <button class="icon" (click)="goToVideo()">
+                <img src="assets/icon/video.png" alt="video" class="file-icon"> </button>
+              <p>Videos</p>
+            </div>
+            <div class="file-item">
+              <button class="icon" (click)="goToNote()">
+                <img src="assets/icon/pages.png" alt="notas" class="file-icon">
+              </button>
+              <p>Texto.txt</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</app-template>
