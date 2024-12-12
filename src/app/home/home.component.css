@@ -21,10 +21,19 @@ body {
   justify-content: flex-end;
   padding: 10px;
   background-color: #fdfdfd;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
 .clock {
   font-size: 24px;
+}
+.user {
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  padding: 10px;
 }
 
 .content {
@@ -44,7 +53,6 @@ body {
 
 .icon {
   background: transparent;
-
   border: none;
   color: inherit;
   cursor: pointer;
