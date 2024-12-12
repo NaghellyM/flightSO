@@ -1,4 +1,10 @@
-<!-- notes.component.html -->
-<div [froalaEditor] [(froalaModel)]="editorContent"></div>
-<button (click)="saveContent()">Save</button>
-<button (click)="ViewNotes()">Notas</button>
+<app-template>
+  <div class="container">
+    <div class="editor-container" [froalaEditor] [(froalaModel)]="editorContent">
+    </div>
+    <div class="button-container">
+      <button class="button save" (click)="saveContent()">Save</button>
+      <button class="button view" (click)="ViewNotes()">Notas</button>
+    </div>
+  </div>
+</app-template>

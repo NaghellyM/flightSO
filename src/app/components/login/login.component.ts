@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '../../models/user.models';
 import { SecurityService } from '../../services/security.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       },
       error: (err) => {
         console.error('Error al iniciar sesión:', err);
-        alert('Correo o contraseña inválidos');
+        Swal.fire('Error', 'Correo o contraseña inválidos', 'error');
       },
     });
   }
