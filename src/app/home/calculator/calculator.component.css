@@ -1,56 +1,50 @@
 .calculator-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
 }
 
 .calculator {
-    width: 90%;
-    
-    background-color: #8fb9b2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  background-color: #8fb9b2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .calculator-screen {
-    width: 95%; /* Asegura que ocupe todo el ancho disponible */
-    height: 50px;
-    font-size: 24px;
-    text-align: right;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #48CFCB;
+  width: 98%;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #48cfcb;
 }
 
-.calculator-buttons {   
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
-    grid-template-rows: repeat(5, 1fr); /* 5 filas de igual altura */
-    grid-gap: 10px;
-    max-width: 100%; /* Evita que se sobrepasen del ancho de .calculator */
-    justify-items: center; /* Centra los botones dentro de cada celda */
-    justify-content: center; /* Asegura que los botones se distribuyan de manera uniforme */
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
 }
 
 button {
-    padding: 15px;
-    font-size: 24px;
-    border-radius: 5px;
-    background-color: #444;
-    color: #48CFCB;
-    cursor: pointer;
-    width: 100%; /* Asegura que los botones ocupen el ancho de la celda */
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 5px;
+  background-color: #444;
+  color: #48cfcb;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 button:active {
-    background-color: #777;
+  background-color: #777;
 }

@@ -1,0 +1,81 @@
+<app-template>
+  <div class="task-manager" *ngIf="systemResources; else loading">
+    <h2 class="header">Administrador de Tareas</h2>
+
+    <!-- Mostrar información de RAM -->
+    <section class="section">
+      <h3>RAM</h3>
+      <div class="info-box">
+        <p>Total: {{ systemResources.ram.total | number }} bytes</p>
+        <p>Libre: {{ systemResources.ram.free | number }} bytes</p>
+      </div>
+    </section>
+
+    <!-- Mostrar procesos de Electron -->
+    <section class="section">
+      <h3>Procesos Relacionados con Electron</h3>
+      <table *ngIf="processes.length > 0" class="process-table">
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>ID del Proceso (PID)</th>
+            <th>Uso de CPU (%)</th>
+            <th>Uso de Memoria (%)</th>
+            <th>VSZ (Memoria Virtual)</th>
+            <th>RSS (Memoria Residual)</th>
+            <th>Estado</th>
+            <th>Inicio</th>
+            <th>Tiempo en Ejecución</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let process of processes">
+            <td>{{ process.user }}</td>
+            <td>{{ process.pid }}</td>
+            <td>{{ process.cpu }}%</td>
+            <td>{{ process.mem }}%</td>
+            <td>{{ process.vsz }} kB</td>
+            <td>{{ process.rss }} kB</td>
+            <td>{{ process.stat }}</td>
+            <td>{{ process.start }}</td>
+            <td>{{ process.time }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div *ngIf="processes.length === 0" class="info-box">
+        <p>No se encontraron procesos relacionados con Electron.</p>
+      </div>
+    </section>
+
+    <!-- Mostrar información de Disco -->
+    <section class="section">
+      <h3>Disco</h3>
+      <div class="info-box">
+        <p>Total: {{ systemResources.disk.total | number }} bytes</p>
+        <p>Libre: {{ systemResources.disk.free | number }} bytes</p>
+      </div>
+    </section>
+
+    <!-- Mostrar información de CPU -->
+    <section class="section">
+      <h3>CPU</h3>
+      <div *ngFor="let cpu of systemResources.cpu; let i = index" class="cpu-box">
+        <p><strong>CPU {{ i + 1 }}</strong> - Modelo: {{ cpu.model }}</p>
+        <p>Velocidad: {{ cpu.speed }} MHz</p>
+        <p>
+          Tiempos: Usuario: {{ cpu.times.user }} | Sistema: {{ cpu.times.sys }} | Ocioso: {{ cpu.times.idle }}
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <ng-template #loading>
+    <div class="loading">
+      <p>Cargando información del sistema...</p>
+    </div>
+  </ng-template>
+
+  <div *ngIf="error" class="error">
+    <p>Error: {{ error }}</p>
+  </div>
+</app-template>

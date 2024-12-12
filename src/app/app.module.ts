@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
 
 @NgModule({
-  declarations: [
-  ],
+  declarations: [],
   imports: [
     FormsModule,
     CommonModule,
@@ -20,6 +18,5 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
   ],
   providers: [],
   bootstrap: [],
-
 })
-export class AppModule { }
+export class AppModule {}

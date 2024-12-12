@@ -1,18 +1,10 @@
-<div [froalaEditor] [(froalaModel)]="editorContent"></div>
-<div id="myEditor"></div><button id="saveButton">Save</button>
-<script>  var editor = new FroalaEditor('#myEditor', {
-        saveParam: 'content',
-        // Set the save URL.    
-        saveURL: 'http://example.com/save',    // HTTP request type.    
-        saveMethod: 'POST',    // Additional save params.    
-        saveParams: { id: 'my_editor' },
-        events: {
-            'save.before': function () {        // Before save request is made.   
-            }, 'save.after': function () {        // After successfully save request.     
-            },
-            'save.error': function () {        // Do something here.     
-            }
-        }
-    })
-    document.querySelector('#saveButton').addEventListener("click", function () { editor.save.save(); })
-    </script>   
+<app-template>
+  <div class="container">
+    <div class="editor-container" [froalaEditor] [(froalaModel)]="editorContent">
+    </div>
+    <div class="button-container">
+      <button class="button save" (click)="saveContent()">Save</button>
+      <button class="button view" (click)="ViewNotes()">Notas</button>
+    </div>
+  </div>
+</app-template>

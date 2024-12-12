@@ -1,70 +1,78 @@
+/* Global Styles */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e0f7fa;
-    color: #0277bd;
+  background-color: #e0f7fa;
+  color: #0277bd;
 }
 
+/* Container Styling */
 .container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    background-color: #fdfdfd;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: #fdfdfd;
+  font-weight: 100;
+  font-style: bold;
 }
 
 .clock {
-    font-size: 24px;
+  font-size: 24px;
+}
+
+.user {
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  padding: 10px;
 }
 
 .content {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
 }
 
 .footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: #c5fff8;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #c5fff8;
+  padding: 10px 0;
 }
 
+/* Icon Styling */
 .icon {
-    background: transparent;
-    /* Sin fondo */
-    border: none;
-    /* Sin bordes */
-    color: inherit;
-    /* Se adapta al color del texto del contenedor */
-    cursor: pointer;
-    /* Indica que es clicable */
-    font-size: 2rem;
-    /* Adapta el tamaño de la fuente al contenedor */
-    padding: 0;
-    /* Elimina los espacios internos */
-    visibility: hidden;
-    /* Hace que el botón sea invisible */
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  visibility: hidden;
+}
+
+button.icon img {
+  width: 50px; /* Ajusta el tamaño según lo que necesites */
+  height: auto; /* Mantén la proporción de la imagen */
+  transition: transform 0.3s ease; /* Añade una animación al pasar el mouse */
 }
 
 .icon:hover {
-    visibility: visible;
-    /* Opcional: Visible al pasar el ratón */
+  visibility: visible;
 }
 
 .container:hover .icon {
-    visibility: visible;
-    /* Muestra el botón cuando se pasa el ratón sobre el contenedor */
+  visibility: visible; /* Muestra el botón cuando se pasa el ratón sobre el contenedor */
 }
