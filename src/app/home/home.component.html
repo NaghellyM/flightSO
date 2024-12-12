@@ -1,20 +1,35 @@
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="clock" id="clock">
-                <app-clock></app-clock>
-            </div>
-        </div>
-        <div class="content">
-            <img src='assets/images/Fongo_flightSO.png' alt="fondo" />
-        </div>
-        <div class="footer">
-            <div class="icon" (click)="goToNotes()">📝</div>
-            <button class="icon" (click)="goToCalculator()" type="submit">🖩</button>
-            <button class="icon" (click)="goToTaskManageresk()" type="submit">🏠</button>
-            <div class="icon">📷</div>
-            <div class="icon">✉️</div>
-            <div class="icon">⚙️</div>
-        </div>
+  <div class="container">
+    <div class="header">
+      <div>
+        <p class="user"> {{user?.email}}</p>
+      </div>
+      <div class="clock" id="clock">
+        <app-clock></app-clock>
+      </div>
     </div>
+    <div class="content">
+      <img src='assets/images/Fongo_flightSO.png' alt="fondo" />
+    </div>
+    <div class="footer">
+      <button class="icon" (click)="goToNotes()">
+        <img src="assets/icon/pages.png" alt="Notes" />
+      </button>
+      <button class="icon" (click)="goToCalculator()" type="submit">
+        <img src="assets/icon/calculator.png" alt="Calculator" />
+      </button>
+      <button class="icon" (click)="goToBrowser()" type="submit">
+        <img src="assets/icon/home.png" alt="home" />
+      </button>
+      <button class="icon" (click)="goToMusic()">
+        <img src="assets/icon/spotify.png" alt="Music" />
+      </button>
+      <button class="icon" (click)="goToGame()">
+        <img src="assets/icon/game.png" alt="game" />
+      </button>
+      <button class="icon"  (click)="goToBrowser()">
+        <img src="assets/icon/google.png" alt="google" />
+      </button>
+    </div>
+  </div>
 </body>

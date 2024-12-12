@@ -1,25 +1,25 @@
 <div class="window" [ngStyle]="computedStyles" [ngClass]="{ 'expanded': expanded, 'selected': selected }"
-    (mousedown)="putInFront.emit(label.toLowerCase())" draggable="true" (dragstart)="onDragStart()"
-    (dragend)="onDragEnd($event)">
+  (mousedown)="putInFront.emit(label.toLowerCase())" draggable="true" (dragstart)="onDragStart()"
+  (dragend)="onDragEnd($event)" (click)="activateWindow()">
 
-    <!-- Header -->
-    <div class="header">
-        <div class="controls">
-            <!-- Close Button -->
-            <button class="control-btn close-btn" (click)="closeApp()"></button>
-            <!-- Toggle Size Button -->
-            <button class="toggle-size-btn" (click)="toggleSize()"></button>
-            <!-- Minimize Button -->
-            <button class="minimize-btn" (click)="minimize()"></button>
-        </div>
-        <!-- Title -->
-        <div class="title">
-            <h2>{{ label }}</h2>
-        </div>
+  <!-- Header -->
+  <div class="header">
+    <div class="controls">
+      <!-- Close Button -->
+      <button class="control-btn close-btn" (click)="closeApp()"></button>
+      <!-- Toggle Size Button -->
+      <button class="toggle-size-btn" (click)="toggleSize()"></button>
+      <!-- Minimize Button -->
+      <button class="minimize-btn" (click)="minimize()"></button>
     </div>
+    <!-- Title -->
+    <div class="title">
+      <h2>{{ label }}</h2>
+    </div>
+  </div>
 
-    <!-- Content -->
-    <div class="content">
-        <ng-content></ng-content>
-    </div>
+  <!-- Content -->
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
 </div>

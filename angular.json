@@ -16,28 +16,34 @@
             "outputPath": "dist/electron-app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css",
-              "src/assets/froala-editor/froala_editor.pkgd.min.css",
-              "src/assets/froala-editor/froala_style.min.css"
+              "src/assets/froala_editor.pkgd.min.css"
             ],
-            "scripts": []
+
+            "scripts": [],
+            "optimization": true,
+            "allowedCommonJsDependencies": [
+              "froala-editor",
+              "mathjs",
+              "typed-function",
+              "javascript-natural-sort",
+              "tiny-emitter",
+              "escape-latex",
+              "seedrandom"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "2mb",
+                  "maximumWarning": "1.5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -76,16 +82,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
